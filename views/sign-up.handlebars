@@ -1,28 +1,31 @@
 <div class="row">
-    <div class="card">
+  <form class="col s12">
+    <div class="row">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">SIGN UP</span>
 
-        <h2 class="card-header">SIGN UP</h2>
-
-            <form class="card-body signup-form">
-
-                <div class="form-group">
-                    <label class="form-label">Username:</label>
-                    <input class="form-input" type="text" id="username-input-signup" />
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">Password:</label>
-                    <input class="form-input" type="password" id="password-input-signup" />
-                </div>
-
-                <div class="form-group">
-                    <button class="btn btn-primary" type="submit">SIGN UP</button>
-                </div>
-
-            </form>
-        <br>
-        <a href="/login">Login Instead</a>
-
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="username" type="username" class="validate" />
+              <label for="username">Username</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate" />
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate" />
+              <label for="email">Email</label>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </form>
 </div>
 <script src="/js/signup.js"></script>
