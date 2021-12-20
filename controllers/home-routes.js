@@ -13,8 +13,10 @@ router.get('/', async(req, res) => {
             }, ],
         })
 
+        // Serialize data for template to read
         const posts = postData.map((post) => post.get({ plain: true }));
 
+        // Pass serialized data and session flag into template
         res.render('homepage', {
             posts,
             logged_in: req.session.logged_in
@@ -65,9 +67,8 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
-// Get homepage
+// If the user is already logged in, redirect the request to the homepage
 router.get('/login', (req, res) => {
-    // If the user is already logged in, redirect the request to the homepage
     if (req.session.logged_in) {
         res.redirect('/homepage');
         return;
