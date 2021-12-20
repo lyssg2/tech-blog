@@ -8,15 +8,15 @@ router.get('/', withAuth, async(req, res) => {
         const commentData = await Comment.findAll({
             include: [User],
             where: { 'user_id': req.session.user_id },
-        })
+        });
 
         // Serializes data to pass through template
-        const comments = commentData.map((comment) => comment.get({ plain: true }))
+        const comments = commentData.map((comment) => comment.get({ plain: true }));
 
         res.render('all-comments', {
             comments,
             loggedIn: req.session.loggedIn
-        })
+        });
     } catch (err) {
         res.status(500).json(err);
     }
@@ -35,3 +35,5 @@ router.post('/', withAuth, async(req, res) => {
         res.status(400).json(err);
     }
 });
+
+module.exports = router;
