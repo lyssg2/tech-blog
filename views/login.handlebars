@@ -1,18 +1,13 @@
-<div class="row">
-  <form class="col s12">
-    <div class="row">
-      <div class="card blue-grey darken-1">
+<div class="container">
+<div class="row center-align">
+    <div class="col s12">
+      <div class="card blue-grey darken-1 hoverable">
         <div class="card-content white-text">
           <span class="card-title">LOGIN</span>
-
-          <div class="row">
+<div class="row">
             <div class="input-field col s12">
-              <input
-                id="username-input-login"
-                type="username"
-                class="validate"
-              />
-              <label for="username">Username</label>
+              <input id="email-input-login" type="email" class="validate" />
+              <label for="email">Email</label>
             </div>
           </div>
           <div class="row">
@@ -25,24 +20,19 @@
               <label for="password">Password</label>
             </div>
           </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="email-input-login" type="email" class="validate" />
-              <label for="email">Email</label>
-            </div>
-          </div>
           <button
             class="btn waves-effect waves-light"
             type="submit"
             name="action"
           >Submit
-            <i class="material-icons right">send</i>
+            <i class="material-icons right"></i>
           </button>
         </div>
       </div>
     </div>
-  </form>
+  </div>
+<div class="row center-align">
+<a href="/signup" class="btn waves-effect waves-teal"><h6>New here? Sign up!</h6></a>
 </div>
-<br />
-<a href="/signup">New here? Sign up!</a>
+</div>
 <script src="/js/signup.js"></script>
