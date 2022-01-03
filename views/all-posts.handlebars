@@ -1,0 +1,10 @@
+<h4 class="center">View All Posts</h4>
+<input type="hidden" name="post-id" value="{{post.id}}" />
+{{#each posts as |post| }}
+<div class="divider"></div>
+  <div class="section">
+    <h5>{{post.title}}</h5>
+    <p>{{post.content}}</p>
+    <p>Posted By: {{post.user_id}} on {{format_date createdAt}}</p>
+  </div>
+{{/each}}

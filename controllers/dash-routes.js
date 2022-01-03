@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post, Comment } = require("../models");
+const { User, Post } = require("../models");
 const withAuth = require('../utils/auth');
 
 // All user posts displayed on dashboard
@@ -23,7 +23,7 @@ router.get('/', withAuth, async(req, res) => {
 })
 
 // When new post button is clicked, directs to new post with the dashboard layout
-router.get('/new', withAuth, async(req, res) => {
+router.get('/new-post', withAuth, async(req, res) => {
     res.render('new-post', {
         layout: 'dashboard'
     })

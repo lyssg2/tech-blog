@@ -5,13 +5,13 @@
     <title>Tech Blog</title>
     <!--Import Google Icon Font-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="assets\css\style.css">
+    <link rel="stylesheet" href="/public/css/style.css">
 
   </head>
   <body>
     <div class="wrapper">
       <nav>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper light-green darken-3">
           <a href="#" class="brand-logo">TECH BLOG</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="/">HOME</a></li>
@@ -19,7 +19,9 @@
             {{#unless loggedIn}}
               <li><a href="/login">LOGIN</a></li>
             {{/unless}}
+            {{#if loggedIn}}
             <li><a href="#" id="logout-link">LOGOUT</a></li>
+            {{/if}}
           </ul>
         </div>
       </nav>
@@ -28,14 +30,9 @@
         {{{body}}}
       </main>
 
-      <footer class="page-footer">
+      <footer class="page-footer light-green darken-3">
         <div class="container">
           <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">A Tech Blog...for techies</h5>
-            </div>
-            <div class="col l4 offset-l2 s12">
-
               <ul>
                 {{#if loggedIn}}
                   <script src="/js/logout.js"></script>
