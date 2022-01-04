@@ -1,4 +1,4 @@
-const loginForm = async(e) => {
+var loginForm = async(e) => {
     e.preventDefault();
 
     console.log('login function loaded')
@@ -25,7 +25,7 @@ const loginForm = async(e) => {
 }
 
 document
-    .querySelector('.login-form')
+    .querySelector('#login-form')
     .addEventListener('submit', loginForm);
 
 console.log('LOGIN JS FILE LOADED!!')

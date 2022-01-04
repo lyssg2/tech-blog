@@ -2,7 +2,8 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // Sign up post route
-router.post('/', async(req, res) => {
+router.post('/login', async(req, res) => {
+    console.log('Login Post Route smacked')
     try {
         const userData = await User.create({
             name: req.body.name,
