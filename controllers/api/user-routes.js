@@ -18,6 +18,9 @@ router.post('/', async(req, res) => {
 
             res.json(userData)
         })
+
+        console.log('User Created', userData)
+
     } catch (err) {
         res.status(400).json(err);
     }
