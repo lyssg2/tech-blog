@@ -34,7 +34,9 @@ router.post('/login', async(req, res) => {
     console.log("Caling the login route ", req.body);
     try {
         // DB query to find username
-        const userData = await User.findOne({ where: { username: req.body.username } });
+        const userData = await User.findOne({
+            where: { username: req.body.username }
+        });
         console.log("user exists ", userData);
         if (!userData) {
             res
