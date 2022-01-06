@@ -13,8 +13,7 @@ router.get('/', withAuth, async(req, res) => {
         // Serializes data to pass through template
         const posts = postData.map((post) => post.get({ plain: true }));
 
-        res.render('all-posts', {
-            layout: 'dashboard',
+        res.render('dashboard', {
             posts
         });
     } catch (err) {
@@ -24,9 +23,7 @@ router.get('/', withAuth, async(req, res) => {
 
 // When new post button is clicked, directs to new post with the dashboard layout
 router.get('/new-post', withAuth, async(req, res) => {
-    res.render('new-post', {
-        layout: 'dashboard'
-    })
+    res.render('new-post')
 })
 
 // When post is clicked, edit view is passed through template

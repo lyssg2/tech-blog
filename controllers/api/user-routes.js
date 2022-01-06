@@ -30,12 +30,12 @@ router.post('/', async(req, res) => {
 })
 
 // Login post route
-router.post('/login', async(req, res) => {
+router.post('/login', (req, res) => {
     console.log("Caling the login route ", req.body);
     try {
         // DB query to find username
-        const userData = await User.findOne({ where: { username: req.body.username } });
-
+        const userData = User.findOne({ where: { username: req.body.username } });
+        console.log("user exists ", userData);
         if (!userData) {
             res
                 .status(400)
@@ -45,7 +45,7 @@ router.post('/login', async(req, res) => {
 
         // Checking password for validation
         const validPassword = userData.checkPassword(req.body.password);
-
+        console.log("Valid password", validPassword);
         if (!validPassword) {
             res
                 .status(400)
