@@ -2,8 +2,10 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 // Sign up post route
-router.post('/login', async(req, res) => {
-    console.log('Login Post Route smacked')
+router.post('/', async(req, res) => {
+
+    console.log('Signup Post Route smacked')
+
     try {
         const userData = await User.create({
             name: req.body.name,
@@ -11,6 +13,7 @@ router.post('/login', async(req, res) => {
             password: req.body.password,
             email: req.body.email,
         })
+        console.log('User Created', userData)
 
         req.session.save(() => {
             req.session.user_id = userData.id;
@@ -20,7 +23,6 @@ router.post('/login', async(req, res) => {
             res.json(userData)
         })
 
-        console.log('User Created', userData)
 
     } catch (err) {
         res.status(400).json(err);
@@ -29,6 +31,7 @@ router.post('/login', async(req, res) => {
 
 // Login post route
 router.post('/login', async(req, res) => {
+    console.log("Caling the login route ", req.body);
     try {
         // DB query to find username
         const userData = await User.findOne({ where: { username: req.body.username } });

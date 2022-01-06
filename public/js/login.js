@@ -24,14 +24,12 @@ var loginForm = async(e) => {
     };
 }
 
-document
-    .querySelector('#login-form')
-    .addEventListener('submit', loginForm);
+document.querySelector('#login-form').addEventListener('submit', loginForm);
 
 console.log('LOGIN JS FILE LOADED!!')
-
-// $('#login').on('click', function() {
-//     console.log('Hello!')
+console.log(document.querySelector('#login-form'))
+    // $('#login').on('click', function() {
+    //     console.log('Hello!')
 
 //     var login = {
 //         username = document.querySelector('#username-input-login'),
