@@ -28,27 +28,3 @@ document.querySelector('#login-form').addEventListener('submit', loginForm);
 
 console.log('LOGIN JS FILE LOADED!!')
 console.log(document.querySelector('#login-form'))
-    // $('#login').on('click', function() {
-    //     console.log('Hello!')
-
-//     var login = {
-//         username = document.querySelector('#username-input-login'),
-//         password = document.querySelector('#password-input-login')
-//     }
-
-//     fetch('/users/login', {
-//         method: 'POST',
-//         headers: {
-//             'Accept': 'application/json',
-//             'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(login)
-//     }).then(function(response) {
-//         return response.json()
-//     }).then(function(data) {
-//         console.log('Data from Backed we got back after we did fetch!', data)
-//     })
-
-//     console.log('login', login)
-
-// })

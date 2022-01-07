@@ -4,6 +4,8 @@ const withAuth = require('../../utils/auth');
 
 // Create post
 router.post('/', withAuth, async(req, res) => {
+
+    console.log('Creat Post route smacked')
     try {
         const newPost = await Post.create({
             ...req.body,
