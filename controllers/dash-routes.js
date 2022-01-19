@@ -14,10 +14,12 @@ router.get('/', withAuth, async(req, res) => {
         const posts = postData.map((post) => post.get({ plain: true }));
 
         res.render('dashboard', {
-            posts
+            posts,
+            logged_in: req.session.logged_in
+
         });
     } catch (err) {
-        res.redirect('login');
+        res.status(500).json(err)
     }
 })
 
@@ -27,24 +29,24 @@ router.get('/new-post', withAuth, async(req, res) => {
 })
 
 // When post is clicked, edit view is passed through template
-router.get('/edit/:id', withAuth, async(req, res) => {
-    try {
-        const postData = await Post.findByPk(req.params.id);
+// router.get('/edit/:id', withAuth, async(req, res) => {
+//     try {
+//         const postData = await Post.findByPk(req.params.id);
 
-        if (postData) {
-            const post = postData.get({ plain: true });
+//         if (postData) {
+//             const post = postData.get({ plain: true });
 
-            res.render('edit-post', {
-                layout: 'dashboard',
-                post
-            });
-        } else {
-            res.status(404).end();
-        };
-    } catch (err) {
-        res.redirect('login');
-    }
-})
+//             res.render('edit-post', {
+//                 layout: 'dashboard',
+//                 post
+//             });
+//         } else {
+//             res.status(404).end();
+//         };
+//     } catch (err) {
+//         res.redirect('login');
+//     }
+// })
 
 
 module.exports = router;

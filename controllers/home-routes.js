@@ -70,7 +70,7 @@ router.get('/signup', (req, res) => {
 // If the user is already logged in, redirect the request to the homepage
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
-        res.redirect('/homepage');
+        res.redirect('/dashboard');
         return;
     }
 

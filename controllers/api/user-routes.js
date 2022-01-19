@@ -34,9 +34,7 @@ router.post('/login', async(req, res) => {
     console.log("Caling the login route ", req.body);
     try {
         // DB query to find username
-        const userData = await User.findOne({
-            where: { username: req.body.username }
-        });
+        const userData = await User.findOne({ where: { username: req.body.username } });
         console.log("user exists ", userData);
         if (!userData) {
             res
@@ -70,7 +68,7 @@ router.post('/login', async(req, res) => {
 
 // Logout post route
 router.post('/logout', (req, res) => {
-    if (req.session.loggedIn) {
+    if (req.session.logged_in) {
         req.session.destroy(() => {
             res.status(204).end();
         });
