@@ -24,7 +24,7 @@ router.get('/', withAuth, async(req, res) => {
 })
 
 // When new post button is clicked, directs to new post with the dashboard layout
-router.get('/new-post', withAuth, async(req, res) => {
+router.get('/new-post', withAuth, (req, res) => {
     res.render('new-post')
 })
 
