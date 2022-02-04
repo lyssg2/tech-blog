@@ -7,7 +7,7 @@ The purpose of this project was to create a CMS style blog website using the MVC
 1. [Description](#Description)
 2. [Technologies](#Technologies)
 3. [Screenshots](#Screenshots)
-4. [Live Website](#Live Website)
+4. [Website](#Website)
 5. [Help](#help)
 6. [Author](#Author)
 7. [Versions](#versions)
@@ -39,7 +39,7 @@ Upon visiting the website via Heroku, a user can
 ![2022-02-03 (4)](https://user-images.githubusercontent.com/89744530/152461467-8e9406a2-4d83-4482-a3da-a0ea24d4c0c8.png)
 
 
-## Live Website
+## Website
 
 Follow the link below to see the Tech Blog Website live!
 
