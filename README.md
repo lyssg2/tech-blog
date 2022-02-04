@@ -7,7 +7,7 @@ The purpose of this project was to create a CMS style blog website using the MVC
 1. [Description](#Description)
 2. [Technologies](#Technologies)
 3. [Screenshots](#Screenshots)
-4. 
+4. [Live Website](#Live Website)
 5. [Help](#help)
 6. [Author](#Author)
 7. [Versions](#versions)
